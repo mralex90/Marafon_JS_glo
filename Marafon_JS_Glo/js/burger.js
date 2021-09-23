@@ -5,3 +5,5 @@ const toggleMenu = () => {
     menuElem.classList.toggle('menu-active')
     burger.classList.toggle('humburger-menu-active')
 }
+
+burger.addEventListener('click', () => toggleMenu())
