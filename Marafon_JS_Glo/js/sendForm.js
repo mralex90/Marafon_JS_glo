@@ -11,7 +11,11 @@ form.addEventListener('submit', (event) => {
         }
     }
 
-    fetch('https://jsonplaceholder.typicode.com/posts').then(response => {
-        console.log(response);
+    fetch('https://jsonplaceholder.typicode.com/photos').then(response => {
+        if (response.status === 200) {
+            return response.json()
+        }
+    }).then(data => {
+        console.log(data);
     })
 })
